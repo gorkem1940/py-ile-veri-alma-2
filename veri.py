@@ -27,7 +27,7 @@ def run_schedule():
     schedule.every(1).seconds.do(fetch_and_save_xml)
     while True:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(1) // bir saniyede bir veriyi yenileyecektir
 
 thread = threading.Thread(target=run_schedule)
 thread.start()
