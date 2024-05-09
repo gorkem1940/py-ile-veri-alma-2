@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 
 def fetch_and_save_xml():
 
-    url = 'http://192.168.2.162/status.xml'
+    url = 'http://192.168.2.162/status.xml' // bu siteden veriyi al 
 
     headers = {'Authorization': 'Bearer YOUR_ACCESS_TOKEN'}
 
@@ -17,7 +17,8 @@ def fetch_and_save_xml():
         xml_data = response.text
         
 
-        with open('status.xml', 'w') as f:
+        with open('status.xml', 'w') as f: 
+            //status.xml yerine istediğimiz dosya uzantısını yazalım
             f.write(xml_data)
     else:
         print('Hata:', response.status_code)
